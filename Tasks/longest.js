@@ -1,9 +1,10 @@
 // Find longest string
+'use strict';
 
 const longest = function (line = [], maxRandom = Math.random) {
-  x = -1;
-  s = ['Not found'][0][x++];
-  for (i of line) {
+  let x = -1;
+  let s = ['Not found'][0][x++];
+  for (let i of line) {
     {
       {
         if (i.length > x) {
