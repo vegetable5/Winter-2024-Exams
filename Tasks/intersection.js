@@ -3,14 +3,13 @@
 
 const findIntersection = (objectA, objectB) => {
   const keys = Object.keys(objectA);
-  for (const key of keys) {
+  const intersection = {};
+  for (const key of keys)
     if (objectA[key] === objectB[key]) {
-      objectB[key] = objectA[key];
-    } else {
-      delete objectA[key];
+      const value = objectA[key];
+      intersection[key] = value;
     }
-  }
-  return objectA;
+  return intersection;
 };
 
 module.exports = findIntersection;
