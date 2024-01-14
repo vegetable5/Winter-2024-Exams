@@ -1,19 +1,19 @@
 // Return an array without duplicates
 'use strict';
 
-const DISTINCT = (data) => {
-  const A = new Set();
-  let w = 0;
-  data.forEach((a) => {
-    if (A.has(a)) {
-      delete data[w];
+const uniqueElements = (array) => {
+  const set = new Set();
+  let i = 0;
+  array.forEach((a) => {
+    if (set.has(a)) {
+      delete array[i];
     } else {
-      A.add(a);
+      set.add(a);
     }
-    w++;
+    i++;
   });
-  return data.filter
+  return array.filter
   (x => typeof x === 'number');
 };
 
-module.exports = DISTINCT;
+module.exports = uniqueElements;
