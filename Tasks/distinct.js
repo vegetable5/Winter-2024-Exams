@@ -2,18 +2,10 @@
 'use strict';
 
 const uniqueElements = (array) => {
-  const set = new Set();
-  let i = 0;
-  array.forEach((a) => {
-    if (set.has(a)) {
-      delete array[i];
-    } else {
-      set.add(a);
-    }
-    i++;
-  });
-  return array.filter
-  (x => typeof x === 'number');
+  const unique = [];
+  for (const item of array)
+    if (!unique.includes(item)) unique.push(item);
+  return unique;
 };
 
 module.exports = uniqueElements;
