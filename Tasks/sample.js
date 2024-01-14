@@ -1,9 +1,9 @@
 // Get one random element from an array
 'use strict';
 
-const SAMPLE = (arr) => {
-  arr = arr[Math.floor(Math.random() * arr.length)];
-  return arr;
+const randomElement = (array) => {
+  array = array[Math.floor(Math.random() * array.length)];
+  return array;
 };
 
-module.exports = SAMPLE;
+module.exports = randomElement;
