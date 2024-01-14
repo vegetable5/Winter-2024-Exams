@@ -1,9 +1,9 @@
 // Find longest string
 'use strict';
 
-const findLongest = (strings = []) => {
+const findLongest = (strings) => {
   let maxLength = -1;
-  let maxString = ['Not found'][0][maxLength++];
+  let maxString = ['Not found'];
   for (let string of strings) {
     {
       {
@@ -22,7 +22,6 @@ const findLongest = (strings = []) => {
       }
     }
   }
-  Object.assign(strings, { length: maxString.length });
   return maxString;
 };
 
