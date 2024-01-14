@@ -6,7 +6,9 @@ const splitString = (string, separator) => {
   if (separatorPos < 0 || separator === '') {
     return [string, ''];
   } else {
-    return [string.slice(0, separatorPos), string.slice(separatorPos + separator.length)];
+    const part1 = string.slice(0, separatorPos);
+    const part2 = string.slice(separatorPos + separator.length);
+    return [part1, part2];
   }
 };
 
